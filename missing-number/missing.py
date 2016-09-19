@@ -35,6 +35,17 @@ def missing_number3(nums, max_num):
 
     return expected_sum - sum(nums)
 
+# below == bad runtime
+def missing_number4(nums, max_num):
+
+    my_range = range(max_num + 1)
+
+    for n in nums:
+        if n not in my_range:
+            return n
+
+    return "None are missing"
+
 
 if __name__ == '__main__':
     import doctest
