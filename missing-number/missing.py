@@ -8,10 +8,13 @@ def missing_number(nums, max_num):
     *max_num*: Largest potential number in list
     """
 
-    seen = [False] * max_num
+    seen = [False] * max_num 
+    # [False, False, False]
 
     for n in nums:
         seen[n - 1] = True
+
+    # [True, False, True]
 
     return seen.index(False) + 1
 
